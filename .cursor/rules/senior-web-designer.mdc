@@ -1,0 +1,9 @@
+---
+description: Use the senior-web-designer skill for HTML, CSS, and Vanilla JavaScript interface work
+globs: "**/*.{html,css,js}"
+alwaysApply: false
+---
+
+When creating or changing layout, UI, typography, icons, or frontend behavior, read and follow `~/.cursor/skills/senior-web-designer/SKILL.md` before writing code. Keep the stack as semantic HTML, CSS, and Vanilla JavaScript unless another stack is explicitly requested.
+
+Do not duplicate the skill here. The detailed standards live in that skill and its `references/` files.
