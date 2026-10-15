@@ -1331,8 +1331,6 @@ svg[stroke] {
   column-gap: 18px;
   flex: 0 0 100%;
   align-items: stretch;
-  transform: scale(0.9);
-  transform-origin: center center;
 }
 
 .compare__card {
@@ -1340,7 +1338,7 @@ svg[stroke] {
   grid-template-rows: subgrid;
   grid-row: span 2;
   min-height: 100%;
-  padding: 28px 28px 8px;
+  padding: 25px 28px 7px;
   border-radius: 22px;
   background: #fff;
   box-shadow: 0 14px 40px rgba(24, 32, 68, 0.06);
@@ -1349,7 +1347,7 @@ svg[stroke] {
 .compare__card h3 {
   margin: 0 0 6px;
   color: var(--red);
-  font-size: clamp(28px, 2.6vw, 36px);
+  font-size: clamp(25px, 2.3vw, 32px);
   font-weight: 500;
   letter-spacing: -0.03em;
   line-height: 1.1;
@@ -1363,13 +1361,13 @@ svg[stroke] {
 
 .compare__card li {
   display: grid;
-  grid-template-columns: 56px minmax(0, 1fr);
-  gap: 16px;
+  grid-template-columns: 50px minmax(0, 1fr);
+  gap: 14px;
   align-items: flex-start;
-  padding: 16px 0;
+  padding: 14px 0;
   border-top: 1px solid #eef0f4;
   color: #3c4354;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.4;
 }
 
@@ -1380,14 +1378,14 @@ svg[stroke] {
 .compare__icon {
   display: grid;
   place-items: center;
-  width: 56px;
-  height: 56px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
 }
 
 .compare__icon svg {
-  width: 28px;
-  height: 28px;
+  width: 25px;
+  height: 25px;
 }
 
 .compare__card--before .compare__icon {
@@ -2092,7 +2090,6 @@ svg[stroke] {
     grid-template-columns: 1fr;
     grid-template-rows: none;
     gap: 12px;
-    transform: none;
   }
 
   .compare__card {
@@ -2103,7 +2100,7 @@ svg[stroke] {
   }
 
   .compare__card h3 {
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .results {
@@ -2286,7 +2283,7 @@ svg[stroke] {
   }
 
   .compare__card h3 {
-    font-size: 26px;
+    font-size: 23px;
   }
 
   .about-me__copy h2,
