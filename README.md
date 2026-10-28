@@ -1,21 +1,21 @@
 # practica_design
 
-Лендинг онлайн-курса «Академия менеджмента в дизайне интерьера Оксаны Фёдоровой». Вёрстка по брифу и правкам заказчика.
+Landing page for an online course, "Academy of Management in Interior Design" by Oksana Fedorova. Built from the client's brief and revision notes. The page content itself is in Russian.
 
 <p align="center">
-  <img src="screenshots/desktop.png" width="640" alt="Десктопная версия">
-  <img src="screenshots/mobile.png" width="200" alt="Мобильная версия">
+  <img src="screenshots/desktop.png" width="640" alt="Desktop version">
+  <img src="screenshots/mobile.png" width="200" alt="Mobile version">
 </p>
 
-## Что внутри
+## Features
 
-- Адаптивная вёрстка от 375 px до широких экранов, без горизонтальной прокрутки
-- Секции: о курсе, результат, для кого, эксперт, программа, тарифы, отзывы
-- Отзывы открываются в модальном окне
-- Плашка согласия на использование cookies
-- Шрифт Geologica, иконки в inline SVG
+- Responsive layout from 375 px up to wide screens, no horizontal scroll
+- Sections: about the course, results, target audience, expert, curriculum, pricing, reviews
+- Reviews open in a modal window
+- Cookie consent banner
+- Geologica font, inline SVG icons
 
-## Структура
+## Project structure
 
 ```
 practica_design/
@@ -26,16 +26,16 @@ practica_design/
 └── screenshots/
 ```
 
-Брифы заказчика (`.docx`) лежат в корне репозитория.
+The client's briefs (`.docx`) are in the repository root.
 
-## Запуск
+## Run locally
 
-Сборки нет. Откройте `index.html` в браузере или поднимите локальный сервер:
+No build step. Open `index.html` in a browser, or start a local server:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-## Стек
+## Tech stack
 
 HTML · CSS · JavaScript
