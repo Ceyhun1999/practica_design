@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f2f3f5; color: #141414; font-family: "Geologica", Arial, sans-serif; font-weight: 300; line-height: 1.7; }
+a { color: #213dfe; text-underline-offset: 4px; }
+a:focus-visible, summary:focus-visible { outline: 2px solid #213dfe; outline-offset: 5px; }
+.legal-header, .legal-footer { width: min(1100px, calc(100% - 48px)); margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 28px 0; }
+.legal-brand { display: flex; align-items: center; gap: 14px; color: #13185a; font-size: 14px; font-weight: 500; line-height: 1.5; text-decoration: none; }
+.legal-brand img { width: 52px; height: 52px; object-fit: contain; }
+.legal-back { flex-shrink: 0; font-size: 14px; }
+.legal-document { width: min(1000px, calc(100% - 48px)); margin: 24px auto 48px; padding: 48px; background: #fff; border-radius: 18px; overflow-wrap: anywhere; }
+h1 { margin: 0 0 32px; color: #13185a; font-size: clamp(27px, 4vw, 42px); font-weight: 500; line-height: 1.2; }
+h2 { margin: 0 0 24px; font-size: 23px; font-weight: 500; line-height: 1.4; }
+.legal-intro { margin-bottom: 32px; }
+.legal-copy strong, .legal-section__body strong { font-weight: 600; }
+ul, ol { padding-left: 24px; }
+.legal-section { border-top: 1px solid #e2e6ee; }
+.legal-section:last-child { border-bottom: 1px solid #e2e6ee; }
+.legal-section summary { padding: 22px 8px; cursor: pointer; color: #13185a; font-weight: 500; font-size: 18px; }
+.legal-section summary::marker { color: #213dfe; }
+.legal-section__body { padding: 0 8px 28px; }
+.legal-footer { align-items: flex-start; padding-top: 0; padding-bottom: 40px; font-size: 13px; }
+.legal-footer nav { display: flex; flex-wrap: wrap; gap: 12px 24px; }
+.legal-footer [aria-current="page"] { color: #5c6170; }
+@media (max-width: 640px) {
+  .legal-header, .legal-footer { width: calc(100% - 32px); flex-direction: column; align-items: flex-start; gap: 16px; }
+  .legal-document { width: calc(100% - 32px); margin-top: 8px; padding: 26px 20px; font-size: 15px; }
+  .legal-brand { font-size: 12px; }
+  h2 { font-size: 19px; }
+  .legal-section summary { font-size: 16px; }
+}
