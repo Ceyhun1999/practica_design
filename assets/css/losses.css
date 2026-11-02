@@ -15,7 +15,7 @@
 
 .losses__hero {
   min-height: clamp(600px, 41.7vw, 740px);
-  background: url('../img/Финансовая архитектура роста.png') right center / cover no-repeat;
+  background: url('../img/financial-growth.png') right center / cover no-repeat;
 }
 
 .losses__head {
@@ -275,7 +275,7 @@
     content: '';
     display: block;
     height: 380px;
-    background: url('../img/Финансовая архитектура роста.png') right center / 125% auto no-repeat;
+    background: url('../img/financial-growth.png') right center / 125% auto no-repeat;
   }
   .losses__head { padding-bottom: 16px; }
   .losses__intro { max-width: 600px; }
@@ -289,7 +289,7 @@
     content: '';
     display: block;
     height: clamp(230px, 60vw, 380px);
-    background: url('../img/Финансовая архитектура роста.png') right center / 145% auto no-repeat;
+    background: url('../img/financial-growth.png') right center / 145% auto no-repeat;
   }
   .losses__head { width: calc(100% - 40px); padding: 32px 0 10px; }
   #losses h2 { max-width: none; font-size: clamp(29px, 6.5vw, 44px); }

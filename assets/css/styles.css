@@ -2410,7 +2410,7 @@ svg[stroke] {
 .mission__aside {
   grid-column: 2;
   grid-row: 2;
-  align-self: center;
+  align-self: start;
   margin: 0;
   padding: 0;
   background: none;
@@ -2440,7 +2440,7 @@ svg[stroke] {
 .mission__aside p {
   margin: 0;
   color: var(--navy);
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.35;
@@ -2771,7 +2771,7 @@ svg[stroke] {
   position: relative;
   isolation: isolate;
   scroll-margin-top: calc(var(--header-h) + 16px);
-  background: #e7e4df url("../img/Роскошная гостиная с панорамным видом на город.png") center / cover no-repeat;
+  background: #e7e4df url("../img/living-room.png") center / cover no-repeat;
   color: var(--navy);
 }
 
@@ -2901,10 +2901,14 @@ svg[stroke] {
   font-weight: 700;
 }
 
-.consult__note {
-  margin: 14px 0 0;
+.consult__card--talk li p {
+  font-weight: 400;
+}
+
+.consult__card .consult__note {
+  margin: 19px 0 0;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.35;
 }
 
