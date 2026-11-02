@@ -2624,9 +2624,9 @@ svg[stroke] {
 }
 
 .grow__top {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 60px auto minmax(0, 1fr);
+  align-items: center;
   gap: 12px;
 }
 
@@ -2640,11 +2640,11 @@ svg[stroke] {
 
 .grow__ico {
   display: block;
-  flex: 0 0 auto;
-  width: 44px;
-  height: 44px;
+  width: 60px;
+  padding: 6px 15px 6px 0;
+  border-right: 1px solid #a4a8b0;
   margin-top: 0;
-  color: #4a63e8;
+  color: var(--navy);
 }
 
 .grow__ico svg {
@@ -2654,7 +2654,9 @@ svg[stroke] {
 }
 
 .grow .grow__points h3 {
-  margin: 18px 0 0;
+  min-width: 0;
+  margin: 0;
+  overflow-wrap: anywhere;
   color: var(--navy);
   font-size: 22px;
   font-weight: 700;
@@ -2687,7 +2689,8 @@ svg[stroke] {
   height: 14px;
   margin-top: 2px;
   border: 1.5px solid var(--navy);
-  border-radius: 50%;
+  border-radius: 4px;
+  background: radial-gradient(circle, var(--navy) 0 2px, transparent 2.5px);
 }
 
 .grow__close {
