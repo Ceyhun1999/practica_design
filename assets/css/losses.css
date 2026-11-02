@@ -14,15 +14,15 @@
 }
 
 .losses__hero {
-  min-height: clamp(600px, 41.7vw, 740px);
-  background: url('../img/financial-growth.png') right center / cover no-repeat;
+  min-height: clamp(520px, 36.1vw, 640px);
+  background: url('../img/financial-growth.png') right top / cover no-repeat;
 }
 
 .losses__head {
   width: calc(100% - 160px);
   max-width: 1520px;
   margin-inline: auto;
-  padding: 44px 0 60px;
+  padding: 44px 0 28px;
 }
 
 #losses h2 {
@@ -81,9 +81,9 @@
 
 .losses__summary {
   display: grid;
-  grid-template-columns: 48px minmax(220px, 0.85fr) minmax(0, 1.65fr) 70px;
+  grid-template-columns: 48px minmax(220px, 0.9fr) minmax(0, 1.65fr) 156px 56px;
   align-items: center;
-  gap: 24px;
+  gap: 20px;
   min-height: 132px;
   padding: 18px 22px;
   cursor: pointer;
@@ -138,19 +138,50 @@
   letter-spacing: -0.025em;
 }
 
-.losses__icon {
-  box-sizing: content-box;
-  width: 52px;
-  height: 52px;
-  max-width: calc(100% - 16px);
-  padding-left: 16px;
+.losses__metric {
+  display: grid;
+  align-content: center;
+  gap: 5px;
+  min-width: 0;
+  min-height: 76px;
+  padding-left: 22px;
   border-left: 2px solid #dfe3e9;
-  color: var(--losses-red);
-  stroke-width: 1.8;
+  color: var(--losses-blue);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.25;
 }
 
+.losses__metric strong {
+  color: var(--losses-red);
+  font-size: clamp(24px, 2vw, 34px);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.045em;
+  overflow-wrap: anywhere;
+}
 
+.losses__metric small { font-size: 0.62em; white-space: nowrap; }
 
+.losses__toggle {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #faf5f6;
+  color: var(--losses-red);
+  transition: background-color 0.2s;
+}
+
+.losses__toggle svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.2s;
+}
+
+.losses__detail[open] .losses__toggle svg { transform: rotate(180deg); }
+.losses__summary:hover .losses__toggle { background: #f7e7eb; }
 
 .losses__summary:focus-visible {
   outline: 3px solid var(--losses-red);
@@ -159,7 +190,7 @@
 
 
 .losses__more {
-  margin: 0 16.2% 0 10.8%;
+  margin: 0 22px 0 90px;
   padding: 16px 0 20px;
   border-top: 1px solid #e7eaf0;
   color: var(--losses-ink);
@@ -181,15 +212,18 @@
   min-height: 154px;
   padding: 14px 36px 14px 12px;
   overflow: hidden;
-  border: 1px solid #294c91;
+  border: 1px solid #243451;
   border-radius: 14px;
-  background: linear-gradient(110deg, #244e94 0%, #345ca0 46%, #9e315e 78%, #c8102e 100%);
+  background:
+    linear-gradient(140deg, transparent 0% 85%, rgba(255, 10, 49, 0.18) 85% 91%, transparent 91%),
+    linear-gradient(105deg, #041c3b 0%, #0b1530 53%, #260d27 70%, #9e0029 89%, #e0002d 100%);
 }
 
 .losses__total-art {
   width: 100%;
   height: 134px;
   object-fit: contain;
+  filter: contrast(1.18) saturate(1.25);
   padding-right: 24px;
   border-right: 1px solid rgba(255, 255, 255, 0.35);
 }
@@ -219,6 +253,8 @@
   margin-top: 5px;
   color: #fff;
 }
+
+.losses__total-bottom > span { color: #ff1437; }
 
 .losses__total .losses__figure {
   color: #fff;
@@ -258,14 +294,15 @@
 @media (max-width: 1100px) {
   #losses > .container { width: calc(100% - 40px); }
   .losses__head { width: calc(100% - 80px); }
-  .losses__hero { min-height: 580px; background-position: 60% center; }
+  .losses__hero { min-height: 520px; background-position: 60% top; }
   #losses h2 { font-size: 40px; }
   .losses__intro { max-width: 380px; font-size: 17px; }
-  .losses__summary { grid-template-columns: 50px minmax(0, 1fr) 60px; gap: 14px; padding: 18px; }
+  .losses__summary { grid-template-columns: 50px minmax(0, 1fr) 156px 48px; gap: 14px; padding: 18px; }
   .losses__number { grid-column: 1; grid-row: 1 / 3; min-height: 60px; margin-top: 0; }
   #losses .losses__title { grid-column: 2; font-size: 20px; }
   .losses__description { grid-column: 2; grid-row: 2; font-size: 14px; }
-  .losses__icon { grid-column: 3; grid-row: 1 / 3; width: 48px; height: 48px; padding-left: 12px; max-width: calc(100% - 12px); }
+  .losses__metric { grid-column: 3; grid-row: 1 / 3; padding-left: 14px; }
+  .losses__toggle { grid-column: 4; grid-row: 1 / 3; width: 48px; height: 48px; }
   .losses__more { margin: 0 18px 0 82px; }
 }
 
@@ -297,11 +334,13 @@
   .losses__intro::before { width: 60px; margin: 20px 0; }
   .losses__intro p + p { margin-top: 18px; }
   .losses__list { gap: 12px; margin-top: 16px; }
-  .losses__summary { grid-template-columns: 36px minmax(0, 1fr); gap: 12px; min-height: 0; padding: 16px; }
+  .losses__summary { grid-template-columns: 36px minmax(0, 1fr) 44px; gap: 16px 12px; min-height: 0; padding: 16px; }
   .losses__number { grid-row: 1; min-height: 36px; font-size: 26px; }
-  #losses .losses__title { grid-column: 2; grid-row: 1; font-size: 18px; }
-  .losses__description { grid-column: 1 / -1; grid-row: 2; font-size: 14px; line-height: 1.5; }
-  .losses__icon { display: none; }
+  #losses .losses__title { grid-column: 2 / -1; grid-row: 1; font-size: 18px; }
+  .losses__description { grid-column: 1 / -1; grid-row: 3; font-size: 14px; line-height: 1.5; }
+  .losses__metric { grid-column: 1 / 3; grid-row: 2; justify-self: end; min-height: 52px; max-width: 100%; padding-left: 14px; font-size: 14px; }
+  .losses__metric strong { font-size: 26px; }
+  .losses__toggle { grid-column: 3; grid-row: 2; width: 44px; height: 44px; }
   .losses__more { margin: 0 16px; padding: 18px 0 22px; font-size: 15px; }
   .losses__footer { margin-top: 16px; }
   .losses__total { grid-template-columns: minmax(0, 1fr) 56px; gap: 14px; padding: 18px 20px 24px; }
@@ -309,11 +348,13 @@
   .losses__total-icon { width: 56px; height: 56px; }
   .losses__total-copy { grid-column: 1 / -1; }
   .losses__total p { font-size: 19px; }
-  .losses__total .losses__figure { font-size: clamp(30px, 7.5vw, 42px); }
+  .losses__total-bottom > span { color: #ff1437; }
+
+.losses__total .losses__figure { font-size: clamp(30px, 7.5vw, 42px); }
   .losses__total .losses__total-bottom { gap: 4px 10px; }
 
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .losses__article a { transition: none; }
+  .losses__article a, .losses__toggle, .losses__toggle svg { transition: none; }
 }
