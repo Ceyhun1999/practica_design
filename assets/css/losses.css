@@ -14,7 +14,7 @@
 }
 
 .losses__hero {
-  min-height: clamp(520px, 36.1vw, 640px);
+  min-height: clamp(440px, 31vw, 550px);
   background: url('../img/financial-growth.png') right top / cover no-repeat;
 }
 
@@ -294,7 +294,7 @@
 @media (max-width: 1100px) {
   #losses > .container { width: calc(100% - 40px); }
   .losses__head { width: calc(100% - 80px); }
-  .losses__hero { min-height: 520px; background-position: 60% top; }
+  .losses__hero { min-height: 460px; background-position: 60% top; }
   #losses h2 { font-size: 40px; }
   .losses__intro { max-width: 380px; font-size: 17px; }
   .losses__summary { grid-template-columns: 50px minmax(0, 1fr) 156px 48px; gap: 14px; padding: 18px; }

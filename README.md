@@ -39,3 +39,15 @@ python3 -m http.server 8000
 ## Tech stack
 
 HTML · CSS · JavaScript
+
+## Consultation form
+
+Both consultation buttons open the native dialog in `index.html`. Styles are in
+`assets/css/consult-form.css`; behavior is in `assets/js/consult-form.js`.
+
+Telegram delivery is deferred. Set `data-endpoint` on `#consult-form` to the
+server-side receiver URL once it is ready. The receiver accepts a JSON POST with
+`name`, `phone`, `preferred_time`, `consent`, and `source`; return a successful HTTP
+status and JSON `{ "success": true }` only after accepting the request. Keep bot
+credentials on the server. Until connected, submission shows a Telegram contact
+link and never claims the application was received.
