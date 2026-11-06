@@ -2854,6 +2854,15 @@ svg[stroke] {
   text-transform: uppercase;
 }
 
+.consult__card h3::after {
+  content: "";
+  display: block;
+  width: 36px;
+  height: 2px;
+  margin-top: 10px;
+  background: var(--red);
+}
+
 .consult__card ul {
   display: grid;
   gap: 12px;
@@ -2901,6 +2910,7 @@ svg[stroke] {
 }
 
 .consult__card--gain strong {
+  display: block;
   font-weight: 700;
 }
 
@@ -2910,8 +2920,10 @@ svg[stroke] {
 
 .consult__card .consult__note {
   margin: 19px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.35;
 }
 
