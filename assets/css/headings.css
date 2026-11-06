@@ -59,3 +59,13 @@
     height: 3px;
   }
 }
+
+/* Consultation title keeps its two-color emphasis. */
+#consult .block-heading {
+  font-weight: 700;
+}
+
+#consult .block-heading span {
+  display: block;
+  color: var(--red);
+}

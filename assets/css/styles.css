@@ -992,6 +992,7 @@ svg[stroke] {
 
 .tariff__actions {
   display: grid;
+  align-content: start;
   gap: 10px;
   margin-bottom: 8px;
 }
@@ -2894,24 +2895,32 @@ svg[stroke] {
 
 .consult__card p {
   margin: 0;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.35;
 }
 
-.consult__card--gain p {
-  color: #7d8494;
+.consult__card--gain p,
+.consult__card--talk li p {
+  color: #315b85;
+  font-weight: 400;
 }
 
 .consult__card--gain strong,
-.consult__card--talk p,
 .consult__note {
   color: var(--navy);
-  font-weight: 600;
+}
+
+.consult__card strong {
+  font-weight: 700;
+}
+
+.consult__note strong {
+  color: var(--navy);
 }
 
 .consult__card--gain strong {
   display: block;
-  font-weight: 700;
 }
 
 .consult__card--talk li p {
@@ -2919,6 +2928,7 @@ svg[stroke] {
 }
 
 .consult__card .consult__note {
+  color: #315b85;
   margin: 19px 0 0;
   padding-top: 14px;
   border-top: 1px solid var(--line);
@@ -2927,9 +2937,6 @@ svg[stroke] {
   line-height: 1.35;
 }
 
-.consult__note strong {
-  font-weight: 700;
-}
 
 .consult__foot {
   display: flex;
@@ -2944,19 +2951,25 @@ svg[stroke] {
   flex: 1;
   gap: 2px;
   margin: 0;
+  padding: 10px 0 10px 12px;
+  border-left: 3px solid var(--red);
+  color: #315b85;
 }
 
 .consult__sign strong {
-  color: var(--red);
-  font-size: 16px;
   font-weight: 700;
 }
 
 .consult__sign span {
-  color: var(--navy);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 1.35;
+}
+
+.consult__sign .consult__greeting {
+  color: var(--red);
+  font-weight: 700;
+  font-size: 16px;
 }
 
 @media (max-width: 860px) {

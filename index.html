@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="assets/css/gifts.css">
     <link rel="stylesheet" href="assets/css/headings.css">
     <link rel="stylesheet" href="assets/css/consult-form.css">
+    <link rel="stylesheet" href="assets/css/payment.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet">
 </head>
@@ -502,11 +503,11 @@
                         </ul>
                         <div class="tariff__price">
                             <p class="tariff__sum">80&nbsp;000&nbsp;руб.</p>
-                            <p class="tariff__pay">в рассрочку по 16&nbsp;000&nbsp;руб. на 5 месяцев</p>
+                            <p class="tariff__pay">Доступна рассрочка на 3 или 5 месяцев</p>
                         </div>
                         <div class="tariff__actions">
-                            <a class="btn btn--primary" href="#consult">Купить курс</a>
-                            <a class="btn btn--ghost" href="#consult">Оформить рассрочку</a>
+                            <button class="btn btn--primary" type="button" data-payment-open="basic" data-payment-plan="full">Купить курс</button>
+                            <button class="btn btn--ghost" type="button" data-payment-open="basic" data-payment-plan="months3">Выбрать рассрочку</button>
                         </div>
                         </div>
                         <details class="tariff__details">
@@ -551,11 +552,11 @@
                         </ul>
                         <div class="tariff__price">
                             <p class="tariff__sum">120&nbsp;000&nbsp;руб.</p>
-                            <p class="tariff__pay">в рассрочку по 20&nbsp;000&nbsp;руб. на 6 месяцев</p>
+                            <p class="tariff__pay">Доступна рассрочка на 3 или 5 месяцев</p>
                         </div>
                         <div class="tariff__actions">
-                            <a class="btn btn--primary" href="#consult">Купить курс</a>
-                            <a class="btn btn--ghost" href="#consult">Оформить рассрочку</a>
+                            <button class="btn btn--primary" type="button" data-payment-open="advanced" data-payment-plan="full">Купить курс</button>
+                            <button class="btn btn--ghost" type="button" data-payment-open="advanced" data-payment-plan="months3">Выбрать рассрочку</button>
                         </div>
                         </div>
                         <details class="tariff__details">
@@ -596,11 +597,10 @@
                         </ul>
                         <div class="tariff__price">
                             <p class="tariff__sum">135&nbsp;000&nbsp;руб.</p>
-                            <p class="tariff__pay">за одного сотрудника студии · в рассрочку по 27&nbsp;000&nbsp;руб. на 5 месяцев</p>
+                            <p class="tariff__pay">за одного сотрудника студии · полная оплата</p>
                         </div>
                         <div class="tariff__actions">
-                            <a class="btn btn--primary" href="#consult">Купить курс</a>
-                            <a class="btn btn--ghost" href="#consult">Оформить рассрочку</a>
+                            <button class="btn btn--primary" type="button" data-payment-open="team" data-payment-plan="full">Купить курс</button>
                         </div>
                         </div>
                         <details class="tariff__details">
@@ -867,7 +867,7 @@
                     </article>
                 </div>
                 <div class="consult__foot">
-                    <p class="consult__sign"><strong>Буду рада знакомству!</strong><span>Оксана Фёдорова, основатель Академии менеджмента в дизайне интерьера</span></p>
+                    <p class="consult__sign"><span class="consult__greeting">Буду рада знакомству!</span><span><strong>Оксана Фёдорова,</strong> основатель Академии менеджмента в дизайне интерьера</span></p>
                     <button class="btn btn--red" type="button" data-consult-open="consult">
                         Выбрать удобное время
                         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -1101,6 +1101,27 @@
             </div>
         </section>
 
+        <aside class="channel-invite" aria-labelledby="channel-invite-title">
+            <div class="container channel-invite__inner">
+                <div class="channel-invite__copy">
+                    <h2 id="channel-invite-title">Продолжим общение<br>в Telegram</h2>
+                    <p>О том, как управлять интерьерными проектами и оставлять время на творчество.</p>
+                    <ul class="channel-invite__topics" aria-label="Темы канала">
+                        <li>Практические советы</li>
+                        <li>Полезные материалы</li>
+                        <li>Новости Академии</li>
+                    </ul>
+                </div>
+                <div class="channel-invite__channel">
+                    <svg class="channel-invite__icon" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="32" fill="#13185a"/><path d="m15 30 33-13c2-.8 3 .5 2.5 2.5l-5.6 27c-.4 1.9-1.6 2.3-3.2 1.3L33 41l-4.4 4.3c-.5.5-.9.9-1.8.9l.6-9.1 16.7-15c.7-.6-.2-1-.9-.5L22.5 34.5l-8.6-2.7c-1.9-.6-1.9-1.8 1.1-2.8Z" fill="#fff"/></svg>
+                    <p class="channel-invite__name">Академия менеджмента<br>в дизайне интерьера</p>
+                    <a class="channel-invite__handle" href="https://t.me/academy_fedorova" target="_blank" rel="noopener noreferrer">@academy_fedorova</a>
+                    <a class="btn btn--red" href="https://t.me/academy_fedorova" target="_blank" rel="noopener noreferrer">Подписаться на канал</a>
+                    <span class="channel-invite__note">Оксана Фёдорова и команда Академии</span>
+                </div>
+            </div>
+        </aside>
+
         <section class="faq" id="faq" aria-label="Вопросы о курсе">
             <div class="container">
                 <p class="section-eyebrow block-eyebrow">Вопросы</p>
@@ -1121,6 +1142,29 @@
                 </div>
             </div>
         </section>
+
+        <dialog class="payment-modal" id="payment-modal" aria-labelledby="payment-title" aria-describedby="payment-description">
+            <button class="payment-modal__close" type="button" data-payment-close aria-label="Закрыть окно оплаты">×</button>
+            <p class="payment-modal__eyebrow">Оформление обучения</p>
+            <h2 id="payment-title">Выберите способ оплаты</h2>
+            <p class="payment-modal__description" id="payment-description"></p>
+            <form id="payment-form">
+                <fieldset class="payment-options">
+                    <legend>Способ оплаты</legend>
+                    <label class="payment-option"><input type="radio" name="payment_plan" value="full" checked><span><strong>Полная оплата</strong><small data-payment-option="full"></small></span></label>
+                    <label class="payment-option" data-installment><input type="radio" name="payment_plan" value="months3"><span><strong>Рассрочка на 3 месяца</strong><small data-payment-option="months3"></small></span></label>
+                    <label class="payment-option" data-installment><input type="radio" name="payment_plan" value="months5"><span><strong>Рассрочка на 5 месяцев</strong><small data-payment-option="months5"></small></span></label>
+                </fieldset>
+                <div class="payment-summary" aria-live="polite" aria-atomic="true">
+                    <div><span>Итого</span><strong id="payment-total"></strong></div>
+                    <p id="payment-schedule"></p>
+                </div>
+                <p class="payment-status" id="payment-status" role="status"></p>
+                <p class="payment-modal__terms">Продолжая, вы принимаете условия <a href="oferta.html" target="_blank" rel="noopener">публичной оферты</a>. Оплата проходит на странице платёжного сервиса.</p>
+                <button class="btn btn--red payment-submit" type="submit" id="payment-submit" disabled>Перейти к оплате</button>
+                <a class="payment-help" href="https://t.me/+79168440802" target="_blank" rel="noopener noreferrer">Задать вопрос об оплате в Telegram</a>
+            </form>
+        </dialog>
 
         <dialog class="consult-modal" id="consult-modal" aria-labelledby="consult-modal-title" aria-describedby="consult-modal-description">
             <button class="consult-modal__close" type="button" data-consult-close aria-label="Закрыть форму">
@@ -1205,7 +1249,10 @@
             <div class='t396__elem tn-elem' data-elem-id='1751231478340' data-elem-type='text'> <div class='tn-atom'><a href="#grow" style="color: inherit">Менеджмент проектов</a></div> </div>
             <div class='t396__elem tn-elem' data-elem-id='175871632121219760' data-elem-type='text'> <div class='tn-atom'><a href="poteri-studii-bez-proektnogo-menedzhmenta.html" style="color: inherit">Статья</a></div> </div>
             <div class='t396__elem tn-elem' data-elem-id='175871632122041410' data-elem-type='text'> <div class='tn-atom'><a href="#faq" style="color: inherit">FAQ</a></div> </div>
-            <div class='t396__elem tn-elem' data-elem-id='1758715957375' data-elem-type='button'> <a class='tn-atom' href="#top"> <div class='tn-atom__button-content'> <span class="tn-atom__button-text">НА ГЛАВНУЮ</span> </div> <span class="tn-atom__button-border"></span> </a> </div> </div> </div> </footer>
+            <div class='t396__elem tn-elem' data-elem-id='1758715957375' data-elem-type='button'> <a class='tn-atom' href="#top"> <div class='tn-atom__button-content'> <span class="tn-atom__button-text">НА ГЛАВНУЮ</span> </div> <span class="tn-atom__button-border"></span> </a> </div> </div> </div> <nav class="footer-community" aria-label="Новости Академии">
+                <a href="https://vk.ru/practika_course" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+            </nav>
+    </footer>
 
 
     <div class="cookies" id="cookies" role="dialog" aria-live="polite" aria-label="Уведомление об использовании cookies">
@@ -1408,18 +1455,28 @@
             var mains = document.querySelectorAll(".tariff__main");
             if (!mains.length) return;
 
-            function equalize() {
-                var i;
+            var prices = document.querySelectorAll(".tariff__price");
+            var actions = document.querySelectorAll(".tariff__actions");
+
+            function matchHeight(elements) {
                 var max = 0;
-                for (i = 0; i < mains.length; i++) {
-                    mains[i].style.minHeight = "";
-                }
-                for (i = 0; i < mains.length; i++) {
-                    max = Math.max(max, mains[i].offsetHeight);
-                }
-                for (i = 0; i < mains.length; i++) {
-                    mains[i].style.minHeight = max + "px";
-                }
+                elements.forEach(function (element) {
+                    max = Math.max(max, element.offsetHeight);
+                });
+                elements.forEach(function (element) {
+                    element.style.minHeight = max + "px";
+                });
+            }
+
+            function equalize() {
+                [mains, prices, actions].forEach(function (elements) {
+                    elements.forEach(function (element) { element.style.minHeight = ""; });
+                });
+                // Stacked cards should retain their natural height.
+                if (window.matchMedia("(max-width: 1100px)").matches) return;
+                matchHeight(actions);
+                matchHeight(prices);
+                matchHeight(mains);
             }
 
             equalize();
@@ -1430,5 +1487,7 @@
 
     </script>
     <script src="assets/js/consult-form.js" defer></script>
+    <script src="assets/js/payment-config.js" defer></script>
+    <script src="assets/js/payment.js" defer></script>
 </body>
 </html>

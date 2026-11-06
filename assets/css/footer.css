@@ -447,3 +447,21 @@
 @media (max-width: 959px) { .site-footer { --footer-grid-half: 320px; } }
 @media (max-width: 639px) { .site-footer { --footer-grid-half: 240px; } }
 @media (max-width: 479px) { .site-footer { --footer-grid-half: 160px; } }
+
+/* Academy news channels. */
+.footer-community {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 32px;
+  width: min(calc(100% - 48px), var(--container));
+  margin-inline: auto;
+  padding: 20px 0 28px;
+  color: var(--navy);
+  font-size: 14px;
+  line-height: 1.5;
+}
+.footer-community a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

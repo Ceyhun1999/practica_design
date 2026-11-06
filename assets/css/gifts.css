@@ -264,3 +264,109 @@
 @media (prefers-reduced-motion: reduce) {
   .gifts__button { transition: none; }
 }
+
+.channel-invite {
+  padding: 40px 0;
+  background: var(--bg);
+}
+.channel-invite__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  align-items: stretch;
+  gap: 48px;
+  padding: 44px;
+  border-radius: 20px;
+  background: var(--navy);
+  color: #fff;
+}
+.channel-invite__copy {
+  align-self: center;
+  padding-block: 8px;
+}
+.channel-invite h2 {
+  margin: 0 0 20px;
+  font-size: clamp(28px, 3.1vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.12;
+  color: #fff;
+}
+.channel-invite__copy > p {
+  max-width: 520px;
+  margin: 0;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.55;
+  color: #e0e4f0;
+}
+.channel-invite__topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin: 28px 0 0;
+  padding: 20px 0 0;
+  border-top: 1px solid #494d7e;
+  list-style: none;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.channel-invite__topics li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.channel-invite__topics li::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: #f28a9a;
+}
+.channel-invite__channel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 24px 24px;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--navy);
+  text-align: center;
+}
+.channel-invite__icon { width: 60px; height: 60px; margin-bottom: 16px; }
+.channel-invite__name {
+  margin: 0 0 8px;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+.channel-invite__handle {
+  color: #315b85;
+  font-size: 14px;
+  text-underline-offset: 4px;
+}
+.channel-invite__channel .btn {
+  width: 100%;
+  min-height: 50px;
+  margin-top: 24px;
+  padding: 12px 16px;
+  font-size: 14px;
+  white-space: normal;
+}
+.channel-invite__note {
+  margin-top: 12px;
+  color: #5c6170;
+  font-size: 11px;
+  line-height: 1.4;
+}
+.channel-invite a:focus-visible { outline: 3px solid #e590a0; outline-offset: 4px; }
+@media (max-width: 860px) {
+  .channel-invite__inner { gap: 28px; padding: 28px; grid-template-columns: minmax(0, 1fr) minmax(250px, 300px); }
+}
+@media (max-width: 640px) {
+  .channel-invite { padding: 24px 0; }
+  .channel-invite__inner { grid-template-columns: 1fr; padding: 24px 20px; gap: 28px; }
+  .channel-invite__copy > p { font-size: 16px; }
+  .channel-invite__topics { margin-top: 22px; }
+  .channel-invite__channel { padding: 24px 20px; }
+}

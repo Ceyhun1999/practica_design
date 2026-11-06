@@ -51,3 +51,21 @@ server-side receiver URL once it is ready. The receiver accepts a JSON POST with
 status and JSON `{ "success": true }` only after accepting the request. Keep bot
 credentials on the server. Until connected, submission shows a Telegram contact
 link and never claims the application was received.
+
+## Course checkout
+
+The tariff buttons open `#payment-modal`. `assets/js/payment-config.js` defines
+seven variants: `basic.full`, `basic.months3`, `basic.months5`, `advanced.full`,
+`advanced.months3`, `advanced.months5`, and `team.full`.
+
+For each variant set `amount` to the confirmed **total** in rubles and `url` to its
+HTTPS checkout link. Installment totals must already include the provider's
+confirmed terms; no commission percentage is guessed in the browser. Monthly
+amounts shown in the modal are approximate; the bank supplies the final schedule.
+Until both amount and link are configured, checkout stays disabled and a Telegram
+contact is offered. No payment is collected or marked successful on this site.
+
+Full-payment prices currently match the page: 80,000 / 120,000 / 135,000 RUB.
+The team price remains **per employee**, matching the existing tariff copy;
+confirm the team billing unit with the provider before connecting its checkout.
+If pricing changes, update both the configuration and tariff card copy.
